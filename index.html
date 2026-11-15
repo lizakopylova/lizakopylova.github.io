@@ -3,11 +3,16 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Liza Kopylova</title>
+  <title>liza's garden</title>
+  <link rel="icon" href="liza.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet" />
   <style>
     :root {
-  --bg: #f5f0ff;       /* pastel purple, very light */
+  --bg: #f6f2f1;       /* warm off-white */
   --accent: #fff5a8;   /* pastel yellow */
+  --name: #7f57c0;     /* purple */
   --ink: #2b2b2b;
   --muted: #2b2b2b;
 }
@@ -17,31 +22,62 @@ html, body {
   padding: 0;
   background: var(--bg);
   color: var(--ink);
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  font-family: "DM Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
   font-size: 14px;
   line-height: 1.5;
 }
 main {
-  max-width: 360px;
+  max-width: 720px;
   margin: 0 auto;
   padding: 96px 24px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;  /* photo : text = 1 : 1 */
+  gap: 28px;
+  row-gap: 60px;
+  align-items: center;
 }
 img.photo {
-  width: 96px;
-  height: 96px;
+  width: 100%;
+  aspect-ratio: 1;
   border-radius: 50%;
   object-fit: cover;
   display: block;
-  margin-bottom: 24px;
 }
 h1 {
-  font-size: 1.25rem;
-  font-weight: 600;
-  margin: 0 0 6px;
+  font-family: "DM Sans", Georgia, "Times New Roman", serif;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 1.2;
+  margin: 0 0 12px;
+}
+.name {
+  color: var(--name);
 }
 p {
   margin: 0 0 24px;
   color: var(--muted);
+}
+h2 {
+  font-family: "DM Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  font-size: 20px;
+  font-weight: 480;
+  color: var(--muted);
+  margin: 0 0 8px;
+}
+.recs {
+  grid-column: 1 / -1;   /* span both columns so it centers on the page */
+  text-align: center;
+}
+.recs ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.recs li {
+  margin: 0 0 8px;
+}
+.recs li:last-child {
+  margin-bottom: 0;
 }
 main a {
   color: var(--ink);
@@ -49,24 +85,48 @@ main a {
   border-bottom: 2px solid var(--accent);
 }
 main a:hover {
-  border-bottom-color: var(--ink);
+  border-bottom-color: #7f57c0;
+}
+.links {
+  grid-column: 1 / -1;   /* span both columns so it centers on the page */
+  text-align: center;
 }
 .links a {
   margin-right: 16px;
+}
+.links a:last-child {
+  margin-right: 0;
+}
+@media (max-width: 600px) {
+  main {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  img.photo {
+    width: 96px;
+  }
 }
     
   </style>
 </head>
 <body>
   <main>
-    <!-- Replace src with your own photo -->
-    <img class="photo" src="JMR_0136 copy.jpg" alt="Liza Kopylova" />
+    <img class="photo" src="liza.png" alt="Liza Kopylova" />
 
-    <h1>hi! 💫 this is Liza's page</h1>
-    <p></p>
-    <p>I am currently a talent resident at <a href="https://adaptionlabs.ai/">Adaption</a>, 
-      a frontier AI lab that builds systems that adapt in real time.</p>
-    <p>In my free time you will find me hiking, reading about ancient history, or playing Stardew Valley.</p>
+    <div class="intro">
+      <h1>hello, this is <span class="name">Liza</span>!</h1>
+      <p>I am currently a talent partner at <a href="https://adaptionlabs.ai/">Adaption</a>, a frontier AI lab building systems that are continuously learning.</p>
+      <p>Outside my work, you will find me reading about ancient history, attending a reformer pilates class, or playing Carcassone.</p>
+    </div>
+
+    <div class="recs">
+      <h2>˗ˏˋ book recs ˎˊ˗</h2>
+      <ul>
+        <li><a href="https://www.amazon.ca/Shark-Going-Inland-Chief-Civilization/dp/0520303415">shark going inland is my chief, p.v. kirch</a></li>
+        <li><a href="https://www.thriftbooks.com/w/the-lost-city-of-the-monkey-god-a-true-story_douglas-preston/11635081/item/28030655/?utm_source=google&amp;utm_medium=cpc&amp;utm_campaign=high_vol_midlist_standard_shopping_customer_acquisition_20381777654&amp;utm_adgroup=&amp;utm_term=&amp;utm_content=666157863328&amp;gad_source=1&amp;gad_campaignid=20381777654&amp;gbraid=0AAAAADwY45gZJGcWgY5xojdLZS9-ZsD5n&amp;gclid=EAIaIQobChMI1LCtpLWKmAMVbjbUAR2rFiOdEAQYASABEgK5TPD_BwE#idiq=28030655&amp;edition=14255000">the lost city of the monkey god, d. preston</a></li>
+        <li><a href="https://www.amazon.com/Mesopotamian-Riddle-Archaeologist-Clergyman-Decipher/dp/1668015447/ref=sr_1_1?crid=131YSK6WJS10K&amp;dib=eyJ2IjoiMSJ9.OL1wt3VX_ox3TiFcRyu_9E-RhFpOQW3ymDDUZ06wA1caHic9fKfoIRvg5ibtyBsFYrRvc-Ixd6nB5z8mQnTWlrnYMlnkXWEhAqg_lf-F4hou-K7Oz6aK4DwnXvwfksOt1OzZDUO10yklZRH8MmJ8DeUmgesd5WPfBLY_FsociFuD9mHKCST5Trbp8SiLITqO7Y_a6gp2qCQYUSd72ieXFKw_BybY-cZGc_8Qf9z_vHs.wvqGDjt0VD2y7kyv77tAZs4tuhmCVfy4x1WwinCnb_g&amp;dib_tag=se&amp;keywords=the+mesopotamian+riddle&amp;qid=1794760993&amp;sprefix=the+mesopotamian+riddle%2Caps%2C171&amp;sr=8-1">the mesopotamian riddle, j. hammer</a></li>
+      </ul>
+    </div>
 
     <div class="links">
       <a href="https://www.linkedin.com/in/elizavetakopylova/">linkedin</a>
